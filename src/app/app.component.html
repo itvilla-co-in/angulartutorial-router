@@ -2,44 +2,17 @@
  <div class="container-fluid itvillamenu">
  
   <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/emp">Employees</a></li>
-    <li><a routerLink="/contactus">Contactus</a></li>     
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+      true}"
+      >Home</a></li>
+    <li><a routerLink="/emp" routerLinkActive="active">Employees</a></li>
+    <li><a routerLink="/contactus" [routerLinkActive]="['active']">Contactus</a></li>     
   </ul> 
 </div>
  
 <router-outlet></router-outlet>
 <!--
 
-<div class="container">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>            
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
  
 -->

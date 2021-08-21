@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmpserviceService } from '../empservice.service';
 
 @Component({
   selector: 'app-emp',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpComponent implements OnInit {
 
-  constructor() { }
+  emps: {id: number, name: string, status: string}[] = [];
+
+  constructor(private empService: EmpserviceService,
+              private router: Router) { }
 
   ngOnInit(): void {
+    this.emps = this.empService.getemps();
+  }
+
+  viewempdet(){
+    console.log("testing");
+    this.router.navigate(['/emplistmain']);
   }
 
 }
