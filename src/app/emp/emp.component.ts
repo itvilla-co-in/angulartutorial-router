@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EmpserviceService } from '../empservice.service';
+ import { EmpserviceService } from '../empservice.service';
 
 @Component({
   selector: 'app-emp',
@@ -18,9 +18,13 @@ export class EmpComponent implements OnInit {
     this.emps = this.empService.getemps();
   }
 
-  viewempdet(){
-    console.log("testing");
-    this.router.navigate(['/emplistmain']);
+  viewempdet(id: string){
+    console.log("testing" + id);
+    const url = "/emplistmain/" + id;
+    this.router.navigate(['/emplistmain/',id]);
+    //this.router.navigate();
   }
+
+   
 
 }
