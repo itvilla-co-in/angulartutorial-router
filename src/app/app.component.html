@@ -2,15 +2,13 @@
  <div class="container-fluid itvillamenu">
  
   <ul>
-    <li>Home</li>
-    <li>Employees</li>
-    <li>contactus</li>     
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/emp">Employees</a></li>
+    <li><a routerLink="/contactus">Contactus</a></li>     
   </ul> 
 </div>
-
-<app-home></app-home>
-<app-emp></app-emp>
-<app-contactus></app-contactus>
+ 
+<router-outlet></router-outlet>
 <!--
 
 <div class="container">
